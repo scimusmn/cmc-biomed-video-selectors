@@ -11,9 +11,11 @@ function Selection(props) {
 
   return (
     <div className="selection-item" onClick={() => setSelection(item)}>
-      <div className="image-container">
-        <img src={item.thumbnail.localFile.publicURL} alt="thumbnail" />
-      </div>
+      {item?.thumbnail?.localFile && (
+        <div className="image-container">
+          <img src={item.thumbnail.localFile.publicURL} alt="thumbnail" />
+        </div>
+      )}
       {Object.keys(item.titleDisplays).map((locale, i) => {
         const title = item.titleDisplays[locale];
         return (
