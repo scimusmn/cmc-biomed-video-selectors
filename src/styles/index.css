@@ -31,19 +31,27 @@ img {
   box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
 }
 
-/* These `example` classnames should be replaced with
+/* These `.video-selector` classnames can be replaced with
   * the slug of the video selector you would like to style.
   * Every video selector is wrapped with its own slug
-  * as a classname so that it can be targeted and have different styles.
+  * as a classname so it can be targeted.
 */
 
-.example.video-selector {
-  background-color: aqua;
+.video-selector {
   height: 1080px;
   width: 1920px;
 }
 
-.example .graphic {
+/* Example of slug-based targeting */
+.brain-injuries.video-selector {
+  background-color: #f2e205;
+}
+
+.appreciate-your-body.video-selector {
+  background-color: #f25f29;
+}
+
+.video-selector .graphic {
   height: 1080px;
   opacity: 0.2;
   position: absolute;
@@ -51,25 +59,25 @@ img {
   width: 1920px;
 }
 
-.example .title-container {
+.video-selector .title-container {
   align-items: center;
   display: flex;
   justify-content: space-around;
 }
 
-.example .title.es {
+.video-selector .title.es {
   color: purple;
 }
 
-.example .title.en-US {
+.video-selector .title.en-US {
   color: blue;
 }
 
-.example .title.fr {
+.video-selector .title.fr {
   color: green;
 }
 
-.example .selection-item {
+.video-selector .selection-item {
   border: 1px solid black;
   margin: 20px;
   max-height: 400px;
@@ -79,21 +87,21 @@ img {
   z-index: 500;
 }
 
-.example .hide-selection {
+.video-selector .hide-selection {
   z-index: -1;
 }
 
-.example .selection-item img {
+.video-selector .selection-item img {
   height: 200px;
   width: 200px;
 }
 
-.example .selection-container {
+.video-selector .selection-container {
   display: flex;
   justify-content: center;
 }
 
-.example .language-switcher {
+.video-selector .language-switcher {
   bottom: 42px;
   color: white;
   font-size: 20px;
@@ -103,19 +111,19 @@ img {
   position: absolute;
 }
 
-.example .language-switcher .language {
+.video-selector .language-switcher .language {
   background-color: rgb(255 255 255 / 25%);
   border-radius: 5px;
   margin-right: 15px;
   padding: 7px;
 }
 
-.example .language-switcher .language a {
+.video-selector .language-switcher .language a {
   color: white;
   text-decoration: none;
 }
 
-.example .captions {
+.video-selector .captions {
   background-color: pink;
   color: blue;
   position: absolute;
@@ -124,65 +132,65 @@ img {
   width: 1920px;
 }
 
-.example .captions.fr {
+.video-selector .captions.fr {
   background-color: peachpuff;
   color: green;
   position: absolute;
   top: 975px;
 }
 
-.example .captions.es {
+.video-selector .captions.es {
   background-color: orange;
   color: purple;
   position: absolute;
   top: 1000px;
 }
 
-.example .selection-title {
+.video-selector .selection-title {
   display: flex;
   justify-content: center;
 }
 
-.example .selection-title.en-US {
+.video-selector .selection-title.en-US {
   color: blue;
 }
 
-.example .selection-title.fr {
+.video-selector .selection-title.fr {
   color: green;
 }
 
-.example .selection-title.es {
+.video-selector .selection-title.es {
   color: purple;
 }
 
-.example .divider {
+.video-selector .divider {
   border: 1px solid blue;
   width: 50%;
 }
 
-.example .divider.fr {
+.video-selector .divider.fr {
   border: 1px solid green;
 }
 
-.example .divider.es {
+.video-selector .divider.es {
   border: 1px solid purple;
 }
 
-.example .hide-player-wrapper {
+.video-selector .hide-player-wrapper {
   opacity: 0;
   transition: opacity 1s;
 }
 
-.example .show-player-wrapper {
+.video-selector .show-player-wrapper {
   opacity: 1;
   transition: opacity 1s;
 }
 
-.example .wrapper {
+.video-selector .wrapper {
   background-color: black;
 }
 
-.example #player-container {
+.video-selector #player-container {
   display: flex;
   height: 1080px;
   justify-content: center;
@@ -193,7 +201,7 @@ img {
   width: 1920px;
 }
 
-.example video {
+.video-selector video {
   height: 1080px;
   left: 0;
   position: absolute;
@@ -201,7 +209,7 @@ img {
   width: 1920px;
 }
 
-.example .progress {
+.video-selector .progress {
   background: white;
   height: 20px;
   position: absolute;
@@ -209,19 +217,19 @@ img {
   width: 1920px;
 }
 
-.example .progress-fill {
+.video-selector .progress-fill {
   background-color: gold;
   height: 20px;
 }
 
-.example .icon {
+.video-selector .icon {
   background: url("back.svg") no-repeat;
   color: white;
   height: 65px;
   width: 65px;
 }
 
-.example .transport-container {
+.video-selector .transport-container {
   background-color: green;
   border-radius: 50%;
   left: 50px;
@@ -229,7 +237,7 @@ img {
   top: 800px;
 }
 
-.example .loading {
+.video-selector .loading {
   background-color: orange;
   color: black;
   padding: 50px;
@@ -239,33 +247,33 @@ img {
 
 /* These are styles for a "youtube" style selector display */
 
-.example-list.video-selector {
+.video-selector-list.video-selector {
   /* to be filled */
 }
 
-.example-list .graphic {
+.video-selector-list .graphic {
   /* to be filled */
 }
 
-.example-list .title-container {
+.video-selector-list .title-container {
   border: 1px solid purple;
   display: flex;
   justify-content: space-around;
 }
 
-.example-list .title.es {
+.video-selector-list .title.es {
   color: purple;
 }
 
-.example-list .title.en-US {
+.video-selector-list .title.en-US {
   color: blue;
 }
 
-.example-list .title.fr {
+.video-selector-list .title.fr {
   color: green;
 }
 
-.example-list .selection-item {
+.video-selector-list .selection-item {
   border: 1px solid black;
   height: 150px;
 
@@ -273,24 +281,24 @@ img {
   z-index: 500;
 }
 
-.example-list .divider {
+.video-selector-list .divider {
   display: none;
 }
 
-.example-list .selection-item img {
+.video-selector-list .selection-item img {
   height: 150px;
   padding-right: 5px;
   width: 150px;
 }
 
-.example-list .selection-container {
+.video-selector-list .selection-container {
   left: 1100px;
   position: absolute;
   top: 100px;
   width: 300px;
 }
 
-.example-list .language-switcher {
+.video-selector-list .language-switcher {
   bottom: 42px;
   color: white;
   font-size: 20px;
@@ -300,19 +308,19 @@ img {
   position: absolute;
 }
 
-.example-list .language-switcher .language {
+.video-selector-list .language-switcher .language {
   background-color: rgb(255 255 255 / 25%);
   border-radius: 5px;
   margin-right: 15px;
   padding: 7px;
 }
 
-.example-list .language-switcher .language a {
+.video-selector-list .language-switcher .language a {
   color: white;
   text-decoration: none;
 }
 
-.example-list .captions {
+.video-selector-list .captions {
   background-color: pink;
   color: blue;
   left: 20px;
@@ -322,43 +330,43 @@ img {
   width: 1270px;
 }
 
-.example-list .captions.fr {
+.video-selector-list .captions.fr {
   background-color: peachpuff;
   color: green;
   position: absolute;
   top: 645px;
 }
 
-.example-list .captions.es {
+.video-selector-list .captions.es {
   background-color: orange;
   color: purple;
   position: absolute;
   top: 665px;
 }
 
-.example-list .selection-title {
+.video-selector-list .selection-title {
   left: 170px;
   position: relative;
   top: -160px;
 }
 
-.example-list .selection-title.en-US {
+.video-selector-list .selection-title.en-US {
   color: blue;
 }
 
-.example-list .selection-title.fr {
+.video-selector-list .selection-title.fr {
   color: green;
 }
 
-.example-list .selection-title.es {
+.video-selector-list .selection-title.es {
   color: purple;
 }
 
-.example-list .wrapper {
+.video-selector-list .wrapper {
   background-color: black;
 }
 
-.example-list #player-container {
+.video-selector-list #player-container {
   display: flex;
   height: 500px;
   justify-content: center;
@@ -367,7 +375,7 @@ img {
   top: 100px;
 }
 
-.example-list .progress {
+.video-selector-list .progress {
   background: white;
   height: 20px;
   left: 20px;
@@ -376,12 +384,12 @@ img {
   width: 1270px;
 }
 
-.example-list .progress-fill {
+.video-selector-list .progress-fill {
   background-color: gold;
   height: 15px;
 }
 
-.example-list .loading {
+.video-selector-list .loading {
   background-color: orange;
   color: black;
   padding: 50px;
