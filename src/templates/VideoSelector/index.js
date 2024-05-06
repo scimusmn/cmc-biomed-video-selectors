@@ -20,6 +20,9 @@ export const pageQuery = graphql`
     }
     selections {
       titleDisplay,
+      description {
+        description
+      }
       captionAsset {
         localFile {
           publicURL
@@ -110,6 +113,8 @@ function VideoSelector(all) {
     const selectionObject = {
       titleDisplay: selection.titleDisplay,
       titleDisplays: getLocales('titleDisplay', index),
+      description: selection.description,
+      descriptions: getLocales('description', index),
       captionAsset: selection.captionAsset?.localFile.publicURL,
       captionAssets: getLocales('captionAsset', index),
       thumbnail: selection.thumbnail,
@@ -124,6 +129,8 @@ function VideoSelector(all) {
   const blankSelection = {
     titleDisplay: selections[0].titleDisplay,
     titleDisplays: getLocales('titleDisplay', 0),
+    description: '',
+    descriptions: getLocales('description', 0),
     captionAsset: '',
     captionAssets: getLocales('captionAsset', 0),
     thumbnail: selections[0].thumbnail,
@@ -131,6 +138,8 @@ function VideoSelector(all) {
     videoAsset: '',
     videoAssets: getLocales('videoAsset', 0),
   };
+
+  console.log('defaultSelector', defaultSelector);
 
   const [currentSelection, setCurrentSelection] = useState(blankSelection);
 

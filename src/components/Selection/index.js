@@ -25,6 +25,15 @@ function Selection(props) {
           </React.Fragment>
         );
       })}
+      {Object.keys(item.descriptions).map((locale, i) => {
+        const { description } = item.descriptions[locale];
+        return (
+          <React.Fragment key={i}>
+            {i !== 0 && <hr className={`divider ${locale}`} />}
+            <h4 className={`selection-description ${locale}`}>{description}</h4>
+          </React.Fragment>
+        );
+      })}
     </div>
   );
 }
