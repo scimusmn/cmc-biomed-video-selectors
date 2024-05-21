@@ -26,7 +26,7 @@ export const pageQuery = graphql`
       captionAsset {
         localFile {
           publicURL
-        } 
+        }
       }
       videoAsset {
         localFile {
@@ -139,8 +139,6 @@ function VideoSelector(all) {
     videoAssets: getLocales('videoAsset', 0),
   };
 
-  console.log('defaultSelector', defaultSelector);
-
   const [currentSelection, setCurrentSelection] = useState(blankSelection);
 
   function setSelection(selection) {
@@ -172,15 +170,14 @@ function VideoSelector(all) {
   ));
 
   return (
-    <div className={`video-selector ${defaultSelector.slug}`}>
-      <div
-        className="graphic"
-        style={{
-          backgroundImage: `url(${defaultSelector.backgroundAsset
-            ? defaultSelector.backgroundAsset.localFile.publicURL
-            : null})`,
-        }}
-      />
+    <div
+      className={`video-selector ${defaultSelector.slug}`}
+      style={{
+        backgroundImage: `url(${defaultSelector.backgroundAsset
+          ? defaultSelector.backgroundAsset.localFile.publicURL
+          : null})`,
+      }}
+    >
       <div className="title-container">
         {selectors.map((selector) => (
           <h1 key={`title-${selector.node_locale}`} className={`title ${selector.node_locale}`}>

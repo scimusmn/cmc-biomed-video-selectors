@@ -1,20 +1,64 @@
 /* stylelint-disable selector-class-pattern */
 /* stylelint-disable no-missing-end-of-source-newline */
+/* stylelint-disable no-invalid-position-at-import-rule */
 
+/* Variables */
+:root {
+  --darkblue: #00415c;
+  --lightblue: #88b0cd;
+  --teal: #005874;
+  --lightteal: #97d2dd;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Ropa Soft PTT";
+  font-weight: 700;
+  src: url("/fonts/Ropa-Soft-PTT-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Ropa Soft PTT";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/Ropa-Soft-PTT-Bold-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Ropa Soft PTT";
+  font-style: italic;
+  font-weight: 800;
+  src: url("/fonts/Ropa-Soft-PTT-ExtraBold-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Avenir Next Condensed";
+  font-weight: 600;
+  src: url("/fonts/Avenir-Next-Condensed-Demi-Bold.ttf");
+}
+
+/* Base Styles */
 html,
 body {
-  font-family: open-sans, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   margin: 0;
+}
+
+body {
+  height: 1080px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  user-select: none;
+  width: 1920px;
 }
 
 img {
   display: block;
 }
 
-/* *****EXAMPLE STYLES**** */
-
+/* Index Level Video Selectors */
 .selector-selector .card {
   border: 1px solid #ccc;
   border-radius: 12px;
@@ -31,368 +75,7 @@ img {
   box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
 }
 
-/* These `.video-selector` classnames can be replaced with
-  * the slug of the video selector you would like to style.
-  * Every video selector is wrapped with its own slug
-  * as a classname so it can be targeted.
-*/
-
-.video-selector {
-  height: 1080px;
-  width: 1920px;
-}
-
-/* Example of slug-based targeting */
-.brain-injuries.video-selector {
-  background-color: #f2e205;
-}
-
-.appreciate-your-body.video-selector {
-  background-color: #f25f29;
-}
-
-.video-selector .graphic {
-  height: 1080px;
-  opacity: 0.2;
-  position: absolute;
-  top: 0;
-  width: 1920px;
-}
-
-.video-selector .title-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-}
-
-.video-selector .title.es {
-  color: purple;
-}
-
-.video-selector .title.en-US {
-  color: blue;
-}
-
-.video-selector .title.fr {
-  color: green;
-}
-
-.video-selector .selection-item {
-  border: 1px solid black;
-  margin: 20px;
-  max-height: 400px;
-  width: 200px;
-
-  /* make sure buttons are above background */
-  z-index: 500;
-}
-
-.video-selector .hide-selection {
-  z-index: -1;
-}
-
-.video-selector .selection-item img {
-  height: 200px;
-  width: 200px;
-}
-
-.video-selector .selection-container {
-  display: flex;
-  justify-content: center;
-}
-
-.video-selector .language-switcher {
-  bottom: 42px;
-  color: white;
-  font-size: 20px;
-  font-weight: 900;
-  left: 40px;
-  outline: none;
-  position: absolute;
-}
-
-.video-selector .language-switcher .language {
-  background-color: rgb(255 255 255 / 25%);
-  border-radius: 5px;
-  margin-right: 15px;
-  padding: 7px;
-}
-
-.video-selector .language-switcher .language a {
-  color: white;
-  text-decoration: none;
-}
-
-.video-selector .captions {
-  background-color: pink;
-  color: blue;
-  position: absolute;
-  text-align: center;
-  top: 950px;
-  width: 1920px;
-}
-
-.video-selector .captions.fr {
-  background-color: peachpuff;
-  color: green;
-  position: absolute;
-  top: 975px;
-}
-
-.video-selector .captions.es {
-  background-color: orange;
-  color: purple;
-  position: absolute;
-  top: 1000px;
-}
-
-.video-selector .selection-title {
-  display: flex;
-  justify-content: center;
-}
-
-.video-selector .selection-title.en-US {
-  color: blue;
-}
-
-.video-selector .selection-title.fr {
-  color: green;
-}
-
-.video-selector .selection-title.es {
-  color: purple;
-}
-
-.video-selector .divider {
-  border: 1px solid blue;
-  width: 50%;
-}
-
-.video-selector .divider.fr {
-  border: 1px solid green;
-}
-
-.video-selector .divider.es {
-  border: 1px solid purple;
-}
-
-.video-selector .hide-player-wrapper {
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.video-selector .show-player-wrapper {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-.video-selector .wrapper {
-  background-color: black;
-}
-
-.video-selector #player-container {
-  display: flex;
-  height: 1080px;
-  justify-content: center;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 1920px;
-}
-
-.video-selector video {
-  height: 1080px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1920px;
-}
-
-.video-selector .progress {
-  background: white;
-  height: 20px;
-  position: absolute;
-  top: 1055px;
-  width: 1920px;
-}
-
-.video-selector .progress-fill {
-  background-color: gold;
-  height: 20px;
-}
-
-.video-selector .icon {
-  background: url("back.svg") no-repeat;
-  color: white;
-  height: 65px;
-  width: 65px;
-}
-
-.video-selector .transport-container {
-  background-color: green;
-  border-radius: 50%;
-  left: 50px;
-  position: absolute;
-  top: 800px;
-}
-
-.video-selector .loading {
-  background-color: orange;
-  color: black;
-  padding: 50px;
-  position: absolute;
-  top: 0;
-}
-
-/* These are styles for a "youtube" style selector display */
-
-.video-selector-list.video-selector {
-  /* to be filled */
-}
-
-.video-selector-list .graphic {
-  /* to be filled */
-}
-
-.video-selector-list .title-container {
-  border: 1px solid purple;
-  display: flex;
-  justify-content: space-around;
-}
-
-.video-selector-list .title.es {
-  color: purple;
-}
-
-.video-selector-list .title.en-US {
-  color: blue;
-}
-
-.video-selector-list .title.fr {
-  color: green;
-}
-
-.video-selector-list .selection-item {
-  border: 1px solid black;
-  height: 150px;
-
-  /* make sure buttons are above background */
-  z-index: 500;
-}
-
-.video-selector-list .divider {
-  display: none;
-}
-
-.video-selector-list .selection-item img {
-  height: 150px;
-  padding-right: 5px;
-  width: 150px;
-}
-
-.video-selector-list .selection-container {
-  left: 1100px;
-  position: absolute;
-  top: 100px;
-  width: 300px;
-}
-
-.video-selector-list .language-switcher {
-  bottom: 42px;
-  color: white;
-  font-size: 20px;
-  font-weight: 900;
-  left: 40px;
-  outline: none;
-  position: absolute;
-}
-
-.video-selector-list .language-switcher .language {
-  background-color: rgb(255 255 255 / 25%);
-  border-radius: 5px;
-  margin-right: 15px;
-  padding: 7px;
-}
-
-.video-selector-list .language-switcher .language a {
-  color: white;
-  text-decoration: none;
-}
-
-.video-selector-list .captions {
-  background-color: pink;
-  color: blue;
-  left: 20px;
-  position: absolute;
-  text-align: center;
-  top: 625px;
-  width: 1270px;
-}
-
-.video-selector-list .captions.fr {
-  background-color: peachpuff;
-  color: green;
-  position: absolute;
-  top: 645px;
-}
-
-.video-selector-list .captions.es {
-  background-color: orange;
-  color: purple;
-  position: absolute;
-  top: 665px;
-}
-
-.video-selector-list .selection-title {
-  left: 170px;
-  position: relative;
-  top: -160px;
-}
-
-.video-selector-list .selection-title.en-US {
-  color: blue;
-}
-
-.video-selector-list .selection-title.fr {
-  color: green;
-}
-
-.video-selector-list .selection-title.es {
-  color: purple;
-}
-
-.video-selector-list .wrapper {
-  background-color: black;
-}
-
-.video-selector-list #player-container {
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  left: 20px;
-  position: absolute;
-  top: 100px;
-}
-
-.video-selector-list .progress {
-  background: white;
-  height: 20px;
-  left: 20px;
-  position: absolute;
-  top: 605px;
-  width: 1270px;
-}
-
-.video-selector-list .progress-fill {
-  background-color: gold;
-  height: 15px;
-}
-
-.video-selector-list .loading {
-  background-color: orange;
-  color: black;
-  padding: 50px;
-  position: absolute;
-  top: 0;
-}
+/* Specific Styles for Each Page & Video Selector Styles */
+@import "brain-injuries.css";
+@import "appreciate-your-body.css";
+@import "video-selector.css";
