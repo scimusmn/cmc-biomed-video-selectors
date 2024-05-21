@@ -20,10 +20,6 @@
   justify-content: space-around;
 }
 
-.video-selector .title.es {
-  color: purple;
-}
-
 .video-selector .selection-item {
   border: 1px solid black;
   margin: 20px;
@@ -79,48 +75,14 @@
   width: 1920px;
 }
 
-.video-selector .captions.fr {
-  background-color: peachpuff;
-  color: green;
-  position: absolute;
-  top: 975px;
-}
-
-.video-selector .captions.es {
-  background-color: orange;
-  color: purple;
-  position: absolute;
-  top: 1000px;
-}
-
 .video-selector .selection-title {
   display: flex;
   justify-content: center;
 }
 
-.video-selector .selection-title.en-US {
-  color: blue;
-}
-
-.video-selector .selection-title.fr {
-  color: green;
-}
-
-.video-selector .selection-title.es {
-  color: purple;
-}
-
 .video-selector .divider {
   border: 1px solid blue;
   width: 50%;
-}
-
-.video-selector .divider.fr {
-  border: 1px solid green;
-}
-
-.video-selector .divider.es {
-  border: 1px solid purple;
 }
 
 .video-selector .hide-player-wrapper {
@@ -198,18 +160,6 @@
   justify-content: space-around;
 }
 
-.video-selector-list .title.es {
-  color: purple;
-}
-
-.video-selector-list .title.en-US {
-  color: blue;
-}
-
-.video-selector-list .title.fr {
-  color: green;
-}
-
 .video-selector-list .selection-item {
   border: 1px solid black;
   height: 150px;
@@ -265,36 +215,10 @@
   width: 1270px;
 }
 
-.video-selector-list .captions.fr {
-  background-color: peachpuff;
-  color: green;
-  position: absolute;
-  top: 645px;
-}
-
-.video-selector-list .captions.es {
-  background-color: orange;
-  color: purple;
-  position: absolute;
-  top: 665px;
-}
-
 .video-selector-list .selection-title {
   left: 170px;
   position: relative;
   top: -160px;
-}
-
-.video-selector-list .selection-title.en-US {
-  color: blue;
-}
-
-.video-selector-list .selection-title.fr {
-  color: green;
-}
-
-.video-selector-list .selection-title.es {
-  color: purple;
 }
 
 .video-selector-list .wrapper {
