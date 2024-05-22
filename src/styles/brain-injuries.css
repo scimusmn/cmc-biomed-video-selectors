@@ -1,0 +1,145 @@
+.brain-injuries.video-selector {
+  .title-container {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-family: "Ropa Soft PTT", sans-serif;
+    justify-content: space-around;
+    padding: 60px 0 20px;
+
+    h1 {
+      font-size: 110px;
+      margin: 0;
+    }
+  }
+
+  .selection-item {
+    border: 10px solid white;
+    border-radius: 250px;
+    box-shadow: 7px 7px 5px 0 #00415dbf;
+    height: 750px;
+    margin: 20px;
+    overflow: hidden;
+    width: 400px;
+    z-index: 500;
+
+    img {
+      height: 517px;
+      width: 400px;
+    }
+  }
+
+  .hide-selection {
+    z-index: -1;
+  }
+
+  .selection-container {
+    display: flex;
+    justify-content: center;
+
+    .text-wrap {
+      background-image: url("/images/brain-injury-bg.svg");
+      height: 263px;
+      margin-top: -50px;
+      padding: 30px 20px 20px;
+      position: relative;
+      z-index: 600;
+
+      .selection-title,
+      .selection-description {
+        margin: 0;
+        text-align: center;
+      }
+
+      .selection-title {
+        color: white;
+        font-family: "Ropa Soft PTT", sans-serif;
+        font-size: 37px;
+        margin: 0;
+        padding-top: 20px;
+      }
+
+      .selection-description {
+        color: white;
+        font-family: "Avenir Next Condensed", sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+        padding: 5px 55px 10px;
+      }
+    }
+  }
+
+  .divider {
+    border: 1px solid blue;
+    width: 50%;
+  }
+
+  .hide-player-wrapper {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .show-player-wrapper {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  .wrapper {
+    background-color: black;
+  }
+
+  #player-container {
+    display: flex;
+    height: 1080px;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 1920px;
+  }
+
+  video {
+    height: 1080px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1920px;
+  }
+
+  .progress {
+    background: white;
+    height: 20px;
+    position: absolute;
+    top: 1060px;
+    width: 1920px;
+  }
+
+  .progress-fill {
+    background-color: #fe5f1a;
+    height: 20px;
+  }
+
+  .icon {
+    background: url("back.svg") no-repeat;
+    color: white;
+    height: 65px;
+    width: 65px;
+  }
+
+  .transport-container {
+    border-radius: 50%;
+    left: 50px;
+    position: absolute;
+    top: 50px;
+  }
+
+  .loading {
+    background-color: orange;
+    color: black;
+    padding: 50px;
+    position: absolute;
+    top: 0;
+  }
+}

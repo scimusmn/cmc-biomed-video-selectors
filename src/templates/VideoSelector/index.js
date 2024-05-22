@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import { useIdleTimer } from 'react-idle-timer/legacy';
 import VideoPlayer from '@components/VideoPlayer';
 import Selection from '../../components/Selection';
-import LanguageSwitcher from '../../components/LanguageSwitcher';
 
 export const pageQuery = graphql`
 
@@ -26,7 +25,7 @@ export const pageQuery = graphql`
       captionAsset {
         localFile {
           publicURL
-        } 
+        }
       }
       videoAsset {
         localFile {
@@ -67,16 +66,7 @@ export const pageQuery = graphql`
 `;
 
 function VideoSelector(all) {
-  const { data, pageContext } = all;
-
-  // If only one locale is passed, create array with all other locales
-  // This is used to create a language switcher
-  let otherLocales = [];
-  if (pageContext.locales.length === 1) {
-    otherLocales = data.allContentfulLocale.edges.filter(
-      ({ node }) => node.code !== pageContext.locales[0],
-    );
-  }
+  const { data } = all;
 
   const selectors = data.allContentfulVideoSelector.edges.map(({ node }) => node);
 
@@ -139,8 +129,6 @@ function VideoSelector(all) {
     videoAssets: getLocales('videoAsset', 0),
   };
 
-  console.log('defaultSelector', defaultSelector);
-
   const [currentSelection, setCurrentSelection] = useState(blankSelection);
 
   function setSelection(selection) {
@@ -172,15 +160,14 @@ function VideoSelector(all) {
   ));
 
   return (
-    <div className={`video-selector ${defaultSelector.slug}`}>
-      <div
-        className="graphic"
-        style={{
-          backgroundImage: `url(${defaultSelector.backgroundAsset
-            ? defaultSelector.backgroundAsset.localFile.publicURL
-            : null})`,
-        }}
-      />
+    <div
+      className={`video-selector ${defaultSelector.slug}`}
+      style={{
+        backgroundImage: `url(${defaultSelector.backgroundAsset
+          ? defaultSelector.backgroundAsset.localFile.publicURL
+          : null})`,
+      }}
+    >
       <div className="title-container">
         {selectors.map((selector) => (
           <h1 key={`title-${selector.node_locale}`} className={`title ${selector.node_locale}`}>
@@ -190,9 +177,6 @@ function VideoSelector(all) {
       </div>
       <div className="selection-container">{selectionItems}</div>
       <VideoPlayer currentSelection={currentSelection} pause={pause} reset={reset} />
-      {otherLocales.length > 0 && (
-        <LanguageSwitcher otherLocales={otherLocales} slug={defaultSelector.slug} />
-      )}
     </div>
   );
 }

@@ -16,24 +16,27 @@ function Selection(props) {
           <img src={item.thumbnail.localFile.publicURL} alt="thumbnail" />
         </div>
       )}
-      {Object.keys(item.titleDisplays).map((locale, i) => {
-        const title = item.titleDisplays[locale];
-        return (
-          <React.Fragment key={i}>
-            {i !== 0 && <hr className={`divider ${locale}`} />}
-            <h4 className={`selection-title ${locale}`}>{title}</h4>
-          </React.Fragment>
-        );
-      })}
-      {Object.keys(item.descriptions).map((locale, i) => {
-        const { description } = item.descriptions[locale];
-        return (
-          <React.Fragment key={i}>
-            {i !== 0 && <hr className={`divider ${locale}`} />}
-            <h4 className={`selection-description ${locale}`}>{description}</h4>
-          </React.Fragment>
-        );
-      })}
+
+      <div className="text-wrap">
+        {Object.keys(item.titleDisplays).map((locale, i) => {
+          const title = item.titleDisplays[locale];
+          return (
+            <React.Fragment key={i}>
+              {i !== 0 && <hr className={`divider ${locale}`} />}
+              <h4 className={`selection-title ${locale}`}>{title}</h4>
+            </React.Fragment>
+          );
+        })}
+        {Object.keys(item.descriptions).map((locale, i) => {
+          const { description } = item.descriptions[locale];
+          return (
+            <React.Fragment key={i}>
+              {i !== 0 && <hr className={`divider ${locale}`} />}
+              <h4 className={`selection-description ${locale}`}>{description}</h4>
+            </React.Fragment>
+          );
+        })}
+      </div>
     </div>
   );
 }

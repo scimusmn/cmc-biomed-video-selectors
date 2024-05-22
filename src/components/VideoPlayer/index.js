@@ -5,7 +5,6 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import useCaptions from '../../useCaptions';
 
 function VideoPlayer(props) {
   const { currentSelection, pause, reset } = props;
@@ -24,10 +23,6 @@ function VideoPlayer(props) {
     }
   }, []);
 
-  const captions = Object.keys(currentSelection.captionAssets).map(
-    (locale) => useCaptions(videoRef, locale, true),
-  );
-
   function onVideoLoad() {
     // Default captions are hidden, but need to be set to "showing" here to be recognized
     Object.keys(videoRef.current.textTracks).forEach((key) => {
@@ -36,8 +31,12 @@ function VideoPlayer(props) {
         track.mode = 'showing';
         track.mode = 'hidden';
       }
-      setIsLoading(false);
     });
+
+    // Move from the Track since we won't have captions uploaded to Contentful.
+    // The captions will be baked into the video itself.
+    // Fixes an issue where the "loading" indicator would never go away.
+    setIsLoading(false);
 
     // progress bar animation
     videoRef.current.addEventListener('timeupdate', () => {
@@ -100,11 +99,8 @@ function VideoPlayer(props) {
         </video>
       </div>
       {isLoading && <div className="loading">Loading...</div>}
-      {Object.keys(currentSelection.captionAssets).map((locale, index) => (
+      {Object.keys(currentSelection.captionAssets).map((locale) => (
         <div key={locale}>
-          <div key={locale} className={`captions captions${index} ${locale}`}>
-            {captions[index]}
-          </div>
           <div className={`progress ${locale}`}>
             <div className={`progress-fill ${locale}`} style={{ width: `${fillAmount}%` }} />
           </div>

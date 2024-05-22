@@ -1,0 +1,15 @@
+/* stylelint-disable selector-class-pattern */
+
+/* Video Player Styles */
+.video-selector {
+  height: 1080px;
+  width: 1920px;
+}
+
+.video-selector .graphic {
+  height: 1080px;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
