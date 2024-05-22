@@ -8,6 +8,7 @@
   --lightblue: #88b0cd;
   --teal: #005874;
   --lightteal: #97d2dd;
+  --purple: #823760;
 }
 
 /* Fonts */
@@ -37,11 +38,15 @@
   src: url("/fonts/Avenir-Next-Condensed-Demi-Bold.ttf");
 }
 
+@font-face {
+  font-family: "Avenir Next Condensed";
+  font-weight: 400;
+  src: url("/fonts/Avenir-Next-Condensed-Regular.ttf");
+}
+
 /* Base Styles */
 html,
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   margin: 0;
 }
 
