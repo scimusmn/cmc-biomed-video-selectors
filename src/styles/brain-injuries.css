@@ -2,10 +2,9 @@
   .title-container {
     align-items: center;
     color: white;
-    display: flex;
     font-family: "Ropa Soft PTT", sans-serif;
-    justify-content: space-around;
     padding: 60px 0 20px;
+    text-align: center;
 
     h1 {
       font-size: 110px;

@@ -11,6 +11,7 @@ export const pageQuery = graphql`
     slug
     node_locale
     titleDisplay
+    subHeading
     inactivityDelay
     backgroundAsset {
       localFile {
@@ -173,6 +174,14 @@ function VideoSelector(all) {
           <h1 key={`title-${selector.node_locale}`} className={`title ${selector.node_locale}`}>
             {selector.titleDisplay}
           </h1>
+        ))}
+        {selectors.map((selector) => (selector.subHeading
+          ? (
+            <h2 key={`title-${selector.node_locale}`} className={`title ${selector.node_locale}`}>
+              {selector.subHeading}
+            </h2>
+          )
+          : null
         ))}
       </div>
       <div className="selection-container">{selectionItems}</div>

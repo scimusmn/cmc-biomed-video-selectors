@@ -1,47 +1,95 @@
 .appreciate-your-body.video-selector {
   .title-container {
     align-items: center;
-    display: flex;
-    justify-content: space-around;
-  }
+    color: white;
+    font-family: "Ropa Soft PTT", sans-serif;
+    padding: 60px 0 20px;
+    text-align: center;
 
-  .selection-item {
-    border: 1px solid black;
-    margin: 20px;
-    max-height: 400px;
-    width: 200px;
-    z-index: 500;
-  }
+    h1 {
+      font-size: 96px;
+      line-height: 1;
+      margin: 0;
+    }
 
-  .hide-selection {
-    z-index: -1;
-  }
-
-  .selection-item img {
-    height: 200px;
-    width: 200px;
+    h2 {
+      font-size: 46px;
+      margin: 0;
+    }
   }
 
   .selection-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-  }
+    margin: 0 auto;
+    max-width: 1350px;
 
-  .language-switcher .language {
-    background-color: rgb(255 255 255 / 25%);
-    border-radius: 5px;
-    margin-right: 15px;
-    padding: 7px;
-  }
+    .selection-item {
+      height: 300px;
+      margin: 20px 30px;
+      padding: 40px 30px 10px 20px;
+      width: 330px;
+      z-index: 500;
 
-  .language-switcher .language a {
-    color: white;
-    text-decoration: none;
-  }
+      img {
+        height: 150px;
+        margin: 0 auto;
+        width: 150px;
+      }
 
-  .selection-title {
-    display: flex;
-    justify-content: center;
+      &.hide-selection {
+        z-index: -1;
+      }
+
+      &:nth-child(even) {
+        background: url("/images/mindful-bg-2.png") 0 0 no-repeat;
+      }
+
+      &:nth-child(odd) {
+        background: url("/images/mindful-bg-1.png") 0 0 no-repeat;
+      }
+
+      .text-wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        justify-content: center;
+        padding: 8px 50px 0;
+        text-align: center;
+        text-wrap: pretty;
+
+        .selection-title {
+          align-items: center;
+          color: var(--teal);
+          display: flex;
+          font-family: "Ropa Soft PTT", sans-serif;
+          font-size: 38px;
+          height: 75px;
+          justify-content: center;
+          line-height: 0.95;
+          margin: 0;
+        }
+
+        .selection-description {
+          color: var(--teal);
+          font-family: "Avenir Next Condensed", sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+
+      /*
+      Third item: Progressive Muscle Relaxation needs to be on two lines.
+      Five Senses wraps at a different padding point. Relax padding on PMR.
+      */
+      &:nth-child(3) {
+        .text-wrap {
+          padding: 0 35px;
+        }
+      }
+    }
   }
 
   .divider {
@@ -88,11 +136,11 @@
     position: absolute;
     top: 1060px;
     width: 1920px;
-  }
 
-  .progress-fill {
-    background-color: #fe5f1a;
-    height: 20px;
+    .progress-fill {
+      background-color: #fe5f1a;
+      height: 20px;
+    }
   }
 
   .icon {
