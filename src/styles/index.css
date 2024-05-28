@@ -1,6 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 /* stylelint-disable no-missing-end-of-source-newline */
 /* stylelint-disable no-invalid-position-at-import-rule */
+/* stylelint-disable property-no-unknown */
 
 /* Variables */
 :root {
@@ -61,6 +62,8 @@ body {
 
 img {
   display: block;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 /* Index Level Video Selectors */
