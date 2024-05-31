@@ -22,6 +22,11 @@
     width: 400px;
     z-index: 500;
 
+    &:active {
+      filter: brightness(90%);
+      transform: scale(0.95);
+    }
+
     img {
       height: 517px;
       width: 400px;
@@ -135,10 +140,16 @@
   }
 
   .loading {
-    background-color: orange;
-    color: black;
-    padding: 50px;
+    align-items: center;
+    background-color: #00415c;
+    color: white;
+    display: flex;
+    font-family: "Ropa Soft PTT", sans-serif;
+    font-size: 36px;
+    height: 1080px;
+    justify-content: center;
     position: absolute;
     top: 0;
+    width: 1920px;
   }
 }
