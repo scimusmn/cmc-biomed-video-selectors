@@ -23,6 +23,11 @@ export const pageQuery = graphql`
       description {
         description
       }
+      captionAsset {
+        localFile {
+          publicURL
+        }
+      }
       videoAsset {
         localFile {
           publicURL
