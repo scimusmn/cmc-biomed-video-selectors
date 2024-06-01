@@ -137,6 +137,11 @@
     left: 50px;
     position: absolute;
     top: 50px;
+
+    &:active {
+      filter: brightness(90%);
+      transform: scale(0.95);
+    }
   }
 
   .loading {
